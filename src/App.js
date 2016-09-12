@@ -55,25 +55,33 @@ var App = React.createClass({
         </p>
 
         <table>
-          <tr>
-            <th>Before</th>
-            <th>After</th>
-          </tr>
-          <tr>
-            <td><textarea id="before" ref="beforeText" value={this.state.beforeText} onChange={this.onChangeBeforeText}></textarea></td>
-            <td><textarea id="after" ref="afterText" value={this.state.afterText} onChange={this.onChangeAfterText}></textarea></td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Before</th>
+              <th>After</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><textarea id="before" ref="beforeText" value={this.state.beforeText} onChange={this.onChangeBeforeText}></textarea></td>
+              <td><textarea id="after" ref="afterText" value={this.state.afterText} onChange={this.onChangeAfterText}></textarea></td>
+            </tr>
+          </tbody>
         </table>
 
         <button onClick={this.onClick}>diff</button>
 
         <table>
-          <tr>
-            <th>Result</th>
-          </tr>
-          <tr>
-            <td><div id="result"></div></td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div id="result"></div></td>
+            </tr>
+          </tbody>
         </table>
       </div>
     );
