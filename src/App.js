@@ -9,42 +9,40 @@ import './App.css';
  */
 var jsdiff = require('diff');
 
-var App = React.createClass({
-  getInitialState() {
-    return {
+class App extends React.Component {
+
+  constructor(...args) {
+    super(...args);
+    this.state = {
       beforeText: "origin value",
       afterText:  "changed value"
     };
-  },
+  }
 
-  onChangeBeforeText: function(e) {
+  onChangeBeforeText(e) {
     this.setState({beforeText: e.target.value});
-  },
-  onChangeAfterText: function(e) {
+  }
+  onChangeAfterText(e) {
     this.setState({afterText: e.target.value});
-  },
-  onClick: function(e) {
-    //this.setState({beforeText: this.refs.beforeText.getDOMNode().value});
-    //this.setState({afterText: this.refs.afterText.getDOMNode().value});
-    //this.setState({result: this.refs.result.getDOMNode().value});
-
-      var diff = jsdiff.diffChars(this.state.beforeText, this.state.afterText);
-      var diffNodes = diff.map(function (part) {
-        var color = part.added ? 'green' : part.removed ? 'red' : 'grey';
-        return (
-          <span style={{color:color}}>{part.value}</span>
-        );
-      });
-
-      ReactDOM.render(
-        <pre>
-          {diffNodes}
-        </pre>,
-        document.getElementById('result')
+  }
+  onClick = () => {
+    var diff = jsdiff.diffChars(this.state.beforeText, this.state.afterText);
+    var diffNodes = diff.map(function (part) {
+      var color = part.added ? 'green' : part.removed ? 'red' : 'grey';
+      return (
+        <span style={{color:color}}>{part.value}</span>
       );
-  },
+    });
 
-  render: function() {
+    ReactDOM.render(
+      <pre>
+        {diffNodes}
+      </pre>,
+      document.getElementById('result')
+    );
+  }
+
+  render() {
     return (
       <div className="App">
         <div className="App-header">
@@ -86,6 +84,6 @@ var App = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default App;
