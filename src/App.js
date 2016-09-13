@@ -1,6 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import './App.css';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import RaisedButton from 'material-ui/RaisedButton';
+
+const buttonStyle = {
+  margin: 12,
+};
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
 
 /**
  * jsdiff
@@ -67,7 +77,7 @@ class App extends React.Component {
           </tbody>
         </table>
 
-        <button onClick={this.onClick}>diff</button>
+        <RaisedButton label="diff" onClick={this.onClick} primary={true} style={buttonStyle}></RaisedButton>
 
         <table>
           <thead>
