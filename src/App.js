@@ -29,10 +29,10 @@ class App extends React.Component {
     };
   }
 
-  onChangeBeforeText(e) {
+  onChangeBeforeText = (e) => {
     this.setState({beforeText: e.target.value});
   }
-  onChangeAfterText(e) {
+  onChangeAfterText = (e) => {
     this.setState({afterText: e.target.value});
   }
   onClick = () => {
