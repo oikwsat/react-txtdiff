@@ -39,3 +39,24 @@
 .App div#result {
   text-align: left;
 }
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.grey {
+  color: grey;
+}
+
+div.flex {
+  display: inline;
+}
+div.flex div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.help {
+  text-align: left;
+}

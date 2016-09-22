@@ -40,7 +40,7 @@ class App extends React.Component {
     var diffNodes = diff.map(function (part) {
       var color = part.added ? 'green' : part.removed ? 'red' : 'grey';
       return (
-        <span style={{color:color}}>{part.value}</span>
+        <span className={color}>{part.value}</span>
       );
     });
 
@@ -77,7 +77,16 @@ class App extends React.Component {
           </tbody>
         </table>
 
-        <RaisedButton label="diff" onClick={this.onClick} primary={true} style={buttonStyle}></RaisedButton>
+        <div className="flex">
+            <RaisedButton label="diff" onClick={this.onClick} primary={true} style={buttonStyle}></RaisedButton>
+          <div>
+            <ul className="help">
+              <li className="green">added</li>
+              <li className="red">removed</li>
+              <li className="grey">not change</li>
+            </ul>
+          </div>
+        </div>
 
         <table>
           <thead>
