@@ -19,7 +19,7 @@ injectTapEventPlugin();
  */
 var jsdiff = require('diff');
 
-class App extends React.Component {
+export default class App extends React.Component {
 
   constructor(...args) {
     super(...args);
@@ -104,5 +104,3 @@ class App extends React.Component {
     );
   }
 }
-
-export default App;
