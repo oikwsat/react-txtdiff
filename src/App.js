@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import './App.css';
+import Diff from './Diff';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import RaisedButton from 'material-ui/RaisedButton';
 
@@ -36,18 +37,8 @@ export default class App extends React.Component {
     this.setState({afterText: e.target.value});
   }
   onClick = () => {
-    var diff = jsdiff.diffChars(this.state.beforeText, this.state.afterText);
-    var diffNodes = diff.map(function (part) {
-      var color = part.added ? 'green' : part.removed ? 'red' : 'grey';
-      return (
-        <span className={color}>{part.value}</span>
-      );
-    });
-
     ReactDOM.render(
-      <pre>
-        {diffNodes}
-      </pre>,
+      <Diff beforeText={this.state.beforeText} afterText={this.state.afterText} />,
       document.getElementById('result')
     );
   }
