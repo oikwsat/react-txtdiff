@@ -9,10 +9,6 @@ import './App.css';
 var jsdiff = require('diff');
 
 export default class Diff extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render(){
     var diff = jsdiff.diffChars(this.props.beforeText, this.props.afterText);
     var diffNodes = diff.map(function (part) {
