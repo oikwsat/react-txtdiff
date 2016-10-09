@@ -13,13 +13,6 @@ const buttonStyle = {
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-/**
- * jsdiff
- *
- * @see https://github.com/kpdecker/jsdiff
- */
-var jsdiff = require('diff');
-
 export default class App extends React.Component {
 
   constructor(...args) {
