@@ -11,10 +11,10 @@ var jsdiff = require('diff');
 export default class Diff extends React.Component {
   render(){
     var diff = jsdiff.diffChars(this.props.beforeText, this.props.afterText);
-    var diffNodes = diff.map(function (part) {
+    var diffNodes = diff.map(function (part, index) {
       var color = part.added ? 'green' : part.removed ? 'red' : 'grey';
       return (
-        <span className={color}>{part.value}</span>
+        <span key={index} className={color}>{part.value}</span>
       );
     });
 
