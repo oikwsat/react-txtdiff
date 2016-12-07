@@ -1,6 +1,7 @@
 {
   "name": "webtxtdiff",
   "version": "0.0.1",
+  "homepage": "http://rockin.work/",
   "private": true,
   "devDependencies": {
     "enzyme": "^2.4.1",
