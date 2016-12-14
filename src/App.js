@@ -84,6 +84,9 @@ export default class App extends React.Component {
             </tr>
           </tbody>
         </table>
+        <footer>
+          <a href="/">HOME</a>
+        </footer>
       </div>
     );
   }
