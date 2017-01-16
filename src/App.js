@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import ReactGA from 'react-ga';
 import './App.css';
 import Diff from './Diff';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -21,6 +22,9 @@ export default class App extends React.Component {
       beforeText: "origin value",
       afterText:  "changed value"
     };
+
+    ReactGA.initialize('UA-60584926-1');
+    ReactGA.pageview(window.location.pathname);
   }
 
   onChangeBeforeText = (e) => {
