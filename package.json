@@ -1,7 +1,7 @@
 {
-  "name": "webtxtdiff",
+  "name": "reacttxtdiff",
   "version": "0.0.1",
-  "homepage": "http://rockin.work/webtxtdiff/",
+  "homepage": "http://rockin.work/reacttxtdiff/",
   "private": true,
   "devDependencies": {
     "enzyme": "^2.4.1",

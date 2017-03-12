@@ -1,7 +1,11 @@
-Webtxtdiff
+react-txtdiff
 ====
 
-Webtxtdiff is web diff tool.
+react-txtdiff is web diff tool.
+create by react-create-app.
+
+## Sample
+- http://rockin.work/reacttxtdiff
 
 ## Install
 - git clone
