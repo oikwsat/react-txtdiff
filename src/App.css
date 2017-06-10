@@ -40,6 +40,11 @@
   text-align: left;
 }
 
+.App div#result pre {
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
 .red {
   color: red;
 }

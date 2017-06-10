@@ -1,6 +1,6 @@
 {
   "name": "reacttxtdiff",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "http://rockin.work/reacttxtdiff/",
   "private": true,
   "devDependencies": {
